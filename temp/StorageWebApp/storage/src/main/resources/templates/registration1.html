@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="register-host">
+        <div>
+            <h1>User Registration - Sign Up</h1>
+        </div>
+        <form th:action="@{/process_register}" method="POST" th:object="${host}">
+            <div class="m-3">
+                <div class="form-group row">
+                    <label class="col-form-group col-4">Username</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" th:field="*{username}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-group col-4">Password</label>
+                    <div class="col-8">
+                        <input type="password" class="form-control" th:field="*{password}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-group col-4">Address</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" th:field="*{address}">
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+                
+            </div>
+            <!-- Username: <input type="text" name="username" th:field="*{username}"/> <br/>
+            Password: <input type="text" name="password" th:field="*{password}"/> <br/>
+            Address: <input type="text" name="address" th:field="*{address}"/> <br/>
+            <button name="submit" type="submit" value="0">Submit</button> -->
+        </form>
+    </div>
+</body>
+
+</html>
